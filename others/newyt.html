@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>See My Work in YouTube</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+<style>
+  body {
+    background-color: #f4f9ff;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .underline {
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #f5c518;
+    margin: 0 auto;
+    margin-top: 8px;
+  }
+  .counter-box {
+    min-width: 100px;
+  }
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background-color: #000;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  .video-wrapper iframe, .video-wrapper img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+ .carousel-indicators {
+  margin-bottom: -3rem; /* Default for large screens */
+}
+
+@media (max-width: 992px) {
+  .carousel-indicators {
+    margin-bottom: -4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-indicators {
+    margin-bottom: -5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-indicators {
+    margin-bottom: -6rem; /* No negative margin on very small screens */
+  }
+}
+
+  /* Style for carousel indicators dots */
+  .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bbb;
+    border: none;
+    margin: 0 5px;
+  }
+  .carousel-indicators .active {
+    background-color: #007bff;
+  }
+  .carousel-control-prev,
+.carousel-control-next {
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffc107; /* Change to any color */
+  border-radius: 50%;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #ff9800; /* Darker hover effect */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Make arrow icon white */
+  width: 18px;
+  height: 18px;
+}
+
+</style>
+</head>
+<body>
+<section class="py-5">
+  <div class="container">
+    <h3 class="text-center fw-bold mb-4">
+      SEE MY WORK IN YOUTUBE <span class="underline"></span>
+    </h3>
+
+    <div class="row">
+      <!-- LEFT SIDE -->
+      <div class="col-lg-6 mb-4">
+        <div id="leftSideCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+
+            <!-- Slide 1: YouTube content -->
+            <div class="carousel-item active">
+              <div class="bg-white shadow rounded p-3 ">
+                <div class="video-wrapper mb-3">
+                  <img src="img/yt.png" alt="YouTube" />
+                </div>
+                <p class="text-muted">
+                  I believe in writing clean, efficient code that not only
+                  performs well but is also easy to maintain.
+                 
+                </p>
+                <div class="d-flex justify-content-between mt-4">
+                  <div class="counter-box bg-primary text-white text-center px-3 py-2 rounded">
+                    <div>Subscribers</div>
+                    <strong>199999</strong>
+                  </div>
+
+                  <div class="counter-box bg-secondary text-white text-center px-3 py-2 rounded">
+                    <div>Upload Projects</div>
+                    <strong>199999</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Buy Me a Coffee content -->
+               <div class="carousel-item">
+              <div class="bg-white shadow rounded p-3 ">
+                <div class="video-wrapper mb-3">
+                  <img src="img/buy2.png" alt="YouTube" />
+                </div>
+                <p class="text-muted">
+                  Support my work by buying me a coffee! Your support helps me keep creating valuable content.
+                </p>
+                <div class="d-flex justify-content-between mt-4">
+                  <div class="counter-box bg-warning text-dark text-center px-3 py-2 rounded">
+                    <div>Coffees Bought</div>
+                    <strong>500</strong>
+                  </div>
+                 
+                  <div class="counter-box bg-success text-white text-center px-3 py-2 rounded">
+                    <div>Supporters</div>
+                    <strong>120</strong>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+          
+
+          </div>
+
+          <!-- Arrows for leftSideCarousel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#leftSideCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#leftSideCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="col-lg-6">
+        <div id="videoCarousel" class="carousel slide" data-bs-interval="false">
+          <!-- Carousel indicators (dots) -->
+          <div class="carousel-indicators" id="carouselIndicators">
+            <!-- JS will add indicators here -->
+          </div>
+
+          <!-- Carousel slides -->
+          <div class="carousel-inner" id="videoSlides">
+            <!-- JS will add slides here -->
+          </div>
+
+          <!-- Arrows for right side carousel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <button class="btn btn-outline-primary">See All Of My Work</button>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Array of video IDs
+  const videoIDs = [
+    "bnq-Z9sQAY4", "kJQP7kiw5Fk", "dQw4w9WgXcQ", "3JZ_D3ELwOQ",
+    "5NV6Rdv1a3I", "LsoLEjrDogU", "uelHwf8o7_U", "fJ9rUzIMcZQ",
+    "IwzUs1IMdyQ", "3AtDnEC4zak", "VbfpW0pbvaU", "hT_nvWreIhg"
+  ];
+
+  const slideContainer = document.getElementById("videoSlides");
+  const indicatorsContainer = document.getElementById("carouselIndicators");
+  const chunkSize = 4;
+
+  for (let i = 0; i < videoIDs.length; i += chunkSize) {
+    const videos = videoIDs.slice(i, i + chunkSize);
+    const slideIndex = i / chunkSize;
+    const activeClass = slideIndex === 0 ? 'active' : '';
+
+    // Create carousel item
+    const slide = document.createElement('div');
+    slide.className = `carousel-item ${activeClass}`;
+    slide.innerHTML = `
+      <div class="row g-3">
+        ${videos.map(videoId => `
+          <div class="col-6">
+            <div class="bg-white shadow rounded p-2 text-center">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>
+              </div>
+              <div class="d-flex justify-content-around mt-2">
+                <button class="btn btn-light btn-sm border">
+                  <i class="bi bi-youtube text-danger"></i> Tutorial
+                </button>
+                <button class="btn btn-light btn-sm border">
+                  <i class="bi bi-code-slash text-warning"></i> Code
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    slideContainer.appendChild(slide);
+
+    // Create indicator button
+    const indicator = document.createElement('button');
+    indicator.type = 'button';
+    indicator.setAttribute('data-bs-target', '#videoCarousel');
+    indicator.setAttribute('data-bs-slide-to', slideIndex);
+    indicator.setAttribute('aria-label', `Slide ${slideIndex + 1}`);
+    if (activeClass) {
+      indicator.classList.add('active');
+      indicator.setAttribute('aria-current', 'true');
+    }
+    indicatorsContainer.appendChild(indicator);
+  }
+</script>
+
+</body>
+</html>

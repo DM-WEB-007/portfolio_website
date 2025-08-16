@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DM 007 | Portfolio Websit</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="page-container">
+
+<!-- Top Navbar -->
+<nav class="navbar navbar-dark py-1 top-navbar d-none d-md-flex">
+  <div class="container d-flex justify-content-between align-items-center" style="padding: 0rem 1rem;">
+    
+    <div class="text-dark small fw-semibold first-icon">
+      <i class="fas fa-envelope me-2 "></i> dmraihan0007@gmail.com
+      <span class="mx-3">|</span>
+      <i class="fas fa-phone-alt me-2"></i> +88 01300573753
+    </div>
+
+       <div class="social-icons d-flex justify-content-center gap-3 ">
+  <a href="https://www.facebook.com/dm.raihan007" class="icon facebook" target="_blank">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://www.youtube.com/@Web.DM-007/featured" class="icon youtube" target="_blank">
+    <i class="fab fa-youtube"></i>
+  </a>
+  <a href="https://t.me/DMweb007" class="icon telegram" target="_blank">
+    <i class="fab fa-telegram"></i>
+  </a>
+  <a href="http://WA.me/+8801300573753" class="icon whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/abu-raihan-512a10332/" class="icon linkedin" target="_blank">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
+  </div>
+</nav>
+
+<!-- Main Navbar -->
+<nav class="navbar-secound">
+  <div class="row-secound container">
+    <div class="logo">
+  <img src="img/logo/1.png" alt="Logo" class="light-logo">
+  <img src="img/logo/2.png" alt="Logo" class="dark-logo">
+  <img src="img/logo/3.png" alt="Logo" class="red-logo">
+</div>
+
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#youtube">Youtube</a></li>
+      <li><a href="#service">Services</a></li>
+      <li><a href="#recent">Recent</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <button id="darkToggle" class="dark-toggle">
+  <div class="toggle-circle">🌙</div>
+</button>
+
+
+
+<style>
+
+</style>
+
+    </ul>
+
+
+    <div class="d-flex gap-4 align-items-center action-buttons">
+      <a href="https://t.me/DMweb007" class="btn  desktop-only onlyborder-btn">Contact</a>
+      <a href="all project.html" class="btn  desktop-only btn-one">Ready Project</a>
+    
+      <a href="#" class="text-dark mobile-only"><i class="fa-brands fa-square-youtube"></i></a>
+      <a href="#" class="text-dark mobile-only"><i class="fa-brands fa-telegram"></i></a>
+      <a href="#" class="text-dark mobile-only icons-img"><img src="img/logo.png" 
+        alt=""></a>
+        
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars" id="menu-icon"></i>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const navLinks = document.querySelectorAll('.nav-links li a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      // Remove 'active' from all links
+      navLinks.forEach(l => l.classList.remove('active'));
+      // Add 'active' to the clicked link
+      this.classList.add('active');
+    });
+  });
+
+</script>
+
+
+<!-- Hero Section -->
+<section class="" id="home">
+  <div class="hero-fullscreen container d-flex justify-content-between align-items-center py-5">
+      <div class="hero-left" style="max-width: 60%;">
+        <p class="fs-5 text-secondary mb-2">Hey, This is</p>
+        <h1 class="display-1 fw-bold mb-3">DM RAIHAN</h1>
+        <h2 class="h4 d-flex align-items-center mb-4">
+          I’m a
+          <span id="typing" class="px-2 py-1 rounded ms-2" ></span>
+        </h2>
+        <p class="fs-5 text-secondary">
+        I possess a keen eye for detail and a strong passion for developing responsive, high-performance websites that deliver seamless and engaging user experiences. I am dedicated to crafting clean, intuitive designs, optimizing functionality across devices, and implementing innovative solutions that drive user satisfaction and business growth.
+        </p>
+        
+        <a href="https://www.youtube.com/@Web.DM-007/videos" class="btn btn-md btn-outline-primary active-btn-color">YouTube Tutorial</a>
+        <a href="https://buymeacoffee.com/dm007" class="btn border border-dark source-code">Source Code</a>
+      </div>
+
+  <div class="hero-wrapper hero-right" id="profile-container">
+    <!-- Profile Image -->
+
+       <!-- <div id="profileCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/about.png" alt="Profile Image" class="profile-img" />
+            </div>
+            <div class="carousel-item">
+                <img src="img/about.png" alt="Profile Image" class="profile-img" />
+            </div>
+            <div class="carousel-item">
+                <img src="img/about.png" alt="Profile Image" class="profile-img" />
+            </div>
+        </div>
+    </div> -->
+
+    <div id="profileCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+        <!-- First Item - Image -->
+        <div class="carousel-item active">
+            <img src="img/about.png" alt="Profile Image" class="profile-img" />
+        </div>
+
+        <!-- Second Item - Video -->
+        <div class="carousel-item">
+            <video class="profile-img" autoplay muted loop playsinline>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Third Item - Video -->
+        <div class="carousel-item">
+            <video class="profile-img" autoplay muted loop playsinline>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Corner Frames -->
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+
+    <!-- Vertical Lines -->
+    <div class="line-top"></div>
+    <div class="line-bottom"></div>
+
+    <!-- Badges -->
+    <div class="badge badge-top">
+      <span>130+</span>Completed Project
+    </div>
+
+    <div class="badge badge-bottom">
+      <span>7+</span>Year's of experience
+    </div>
+  </div>
+    <script>
+    const container = document.getElementById('profile-container');
+    setInterval(() => {
+      contai
+      ner.classList.toggle('swap');
+    }, 3000);
+  </script>
+
+  <!-- Infinite Scrolling Carousel -->
+<div class="carousel-container">
+    <div class="carousel-track-wrapper">
+      <div class="carousel-track">
+        <div class="tech-icon"><i class="fab fa-html5"></i><span>HTML</span></div>
+        <div class="tech-icon"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+        <div class="tech-icon"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+        <div class="tech-icon"><i class="fab fa-react"></i><span>React</span></div>
+        <div class="tech-icon"><i class="fab fa-angular"></i><span>Angular</span></div>
+        <div class="tech-icon"><i class="fab fa-vuejs"></i><span>Vue</span></div>
+        <div class="tech-icon"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+        <div class="tech-icon"><i class="fab fa-php"></i><span>PHP</span></div>
+        <div class="tech-icon"><i class="fab fa-laravel"></i><span>Laravel</span></div>
+        <div class="tech-icon"><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="tech-icon"><i class="fab fa-java"></i><span>Java</span></div>
+        <div class="tech-icon"><i class="fab fa-github"></i><span>GitHub</span></div>
+
+        <div class="tech-icon"><i class="fab fa-html5"></i><span>HTML</span></div>
+        <div class="tech-icon"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+        <div class="tech-icon"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+        <div class="tech-icon"><i class="fab fa-react"></i><span>React</span></div>
+        <div class="tech-icon"><i class="fab fa-angular"></i><span>Angular</span></div>
+        <div class="tech-icon"><i class="fab fa-vuejs"></i><span>Vue</span></div>
+        <div class="tech-icon"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+        <div class="tech-icon"><i class="fab fa-php"></i><span>PHP</span></div>
+        <div class="tech-icon"><i class="fab fa-laravel"></i><span>Laravel</span></div>
+        <div class="tech-icon"><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="tech-icon"><i class="fab fa-java"></i><span>Java</span></div>
+        <div class="tech-icon"><i class="fab fa-github"></i><span>GitHub</span></div>
+      </div>
+    </div>
+  </div> 
+</section>
+
+
+</div>
+
+
+
+
+<section class="banner mt-5 mb-5">
+  <div class="container">
+
+    <!-- Desktop Carousel (2 cards per slide) -->
+    <div id="desktopCarousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-indicators mb-3">
+        <button type="button" data-bs-target="#desktopCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#desktopCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#desktopCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="card custom-banner position-relative overflow-hidden border-0">
+                <img src="img/banner/1.png" class="w-100 h-100" style="object-fit:cover;" alt="">
+                <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+                
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card custom-banner position-relative overflow-hidden border-0">
+                <img src="img/banner/2.png" class="w-100 h-100" style="object-fit:cover;" alt="">
+                <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+                 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="card custom-banner position-relative overflow-hidden border-0">
+                <img src="img/banner/3.png" class="w-100 h-100" style="object-fit:cover;" alt="Card 3">
+                <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+                 
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card custom-banner position-relative overflow-hidden border-0">
+                <img src="img/banner/4.png" class="w-100 h-100" style="object-fit:cover;" alt="Card 4">
+                <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+               
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="card custom-banner position-relative overflow-hidden border-0">
+                <img src="img/banner/5.png" class="w-100 h-100" style="object-fit:cover;" alt="Card 5">
+                <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+                 
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card custom-banner position-relative overflow-hidden border-0">
+                <img src="img/banner/6.png" class="w-100 h-100" style="object-fit:cover;" alt="Card 6">
+                <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+                 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Carousel (1 card per slide) -->
+    <div id="mobileCarousel" class="carousel slide d-block d-md-none" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-indicators mb-3">
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="5"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card custom-banner position-relative overflow-hidden border-0">
+            <img src="img/project1.png" class="w-100 h-100" style="object-fit:cover;" alt="Card 1">
+            <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+              Slide 1 Card 1
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-banner position-relative overflow-hidden border-0">
+            <img src="img/project3.png" class="w-100 h-100" style="object-fit:cover;" alt="Card 2">
+            <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+              Slide 1 Card 2
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-banner position-relative overflow-hidden border-0">
+            <img src="img/project2.png" class="w-100 h-100" style="object-fit:cover;" alt="Card 3">
+            <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+              Slide 2 Card 1
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-banner position-relative overflow-hidden border-0">
+            <img src="img/project2.png" class="w-100 h-100" style="object-fit:cover;" alt="Card 4">
+            <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+              Slide 2 Card 2
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-banner position-relative overflow-hidden border-0">
+            <img src="img/project3.png" class="w-100 h-100" style="object-fit:cover;" alt="Card 5">
+            <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+              Slide 3 Card 1
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-banner position-relative overflow-hidden border-0">
+            <img src="img/project1.png" class="w-100 h-100" style="object-fit:cover;" alt="Card 6">
+            <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+              Slide 3 Card 2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <style>
+    .carousel-scroll {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      cursor: grab;
+      padding-bottom: 10px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .carousel-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel-scroll:active {
+      cursor: grabbing;
+    }
+
+    .carousel-card-yt {
+      flex: 0 0 33.3333%;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+    @media (max-width: 992px) {
+      .carousel-card-yt {
+        flex: 0 0 50%;
+      }
+    }
+    @media (max-width: 768px) {
+      .carousel-card-yt {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+
+<!-- About -->
+
+<section class="team-section" id="about">
+  <div class="container about-me-text">
+      <h3 class="text-center fw-bold mb-4 about-me-text">
+      ABOUT ME <span class="underline"></span>
+    </h3>
+    <div class="row d-flex justify-content-between align-items-center">
+      
+      <!-- Left Side Text -->
+      <div class="main-content col-md-4">
+      
+         <p>
+    <span class="fw-bold ">Who I Am:</span><br>
+    I’m <span class="first-text">ABU RAIHAN</span>, a dedicated Web Developer passionate about transforming ideas into clean, intuitive, and high-performing digital solutions.
+   </p>
+    <p>
+     <span class="fw-bold">Professional Summary:</span><br>
+    With over 5 years of experience in full-stack web development, I design and build responsive, dynamic, and visually engaging websites. My expertise includes HTML, CSS, JavaScript, TailwindCSS, Bootstrap, and React on the frontend, alongside PHP, Laravel, and MySQL on the backend. I also specialize in UI/UX design, leveraging tools like Figma to create user-friendly interfaces that merge creativity with functionality.
+  </p>
+
+       <p>
+    <span class="fw-bold">Approach & Philosophy:</span><br>
+    I write clean, maintainable, and efficient code while ensuring optimal performance and scalability. By collaborating closely with clients and designers, I deliver solutions that are visually appealing, technically robust, and accessible to all users.
+  </p>
+      </div>
+      
+      <div class="container-control col-md-8">
+
+      
+      <div class="icon">
+        <div class="imgbx active" style="--i:1" data-id="content1">
+          <img src="img/about/1.png" alt="">
+        </div>
+
+         <div class="imgbx" style="--i:2" data-id="content2">
+          <img src="img/about/2.jpg" alt="">
+        </div>
+
+         <div class="imgbx" style="--i:3" data-id="content3">
+          <img src="img/about.png" alt="">
+        </div>
+
+         <div class="imgbx" style="--i:4" data-id="content4">
+          <img src="img/about.png" alt="">
+        </div>
+
+         <div class="imgbx" style="--i:5" data-id="content4">
+          <img src="img/about.png" alt="">
+        </div>
+
+         <div class="imgbx" style="--i:6" data-id="content6">
+          <img src="img/about.png" alt="">
+        </div>
+
+         <div class="imgbx" style="--i:7" data-id="content7">
+          <img src="img/about.png" alt="">
+        </div>
+
+         <div class="imgbx" style="--i:8" data-id="content8">
+          <img src="img/dp.png" alt="">
+        </div>
+      </div>
+
+      
+      <div class="content-box" >
+        <div class="contentBx active" id="content1">
+            <div class="card-box">
+                <div class="imgbx">
+                    <img src="img/about/1.png" alt="">
+                </div>
+                <div class="textbx">
+                  <h2>Someone Famous <br><span>Product Designer</span></h2>
+                  <ul class="sci">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+         <div class="contentBx" id="content2">
+            <div class="card-box">
+                <div class="imgbx">
+                    <img src="img/about/2.jpg" alt="">
+                </div>
+                <div class="textbx">
+                  <h2>Someone Famous <br><span>Product Designer</span></h2>
+                  <ul class="sci">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+         <div class="contentBx" id="content3">
+            <div class="card-box">
+                <div class="imgbx">
+                    <img src="img/about.png" alt="">
+                </div>
+                <div class="textbx">
+                  <h2>Someone Famous <br><span>Product Designer</span></h2>
+                  <ul class="sci">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+         <div class="contentBx" id="content4">
+            <div class="card-box">
+                <div class="imgbx">
+                    <img src="img/about.png" alt="">
+                </div>
+                <div class="textbx">
+                  <h2>Someone Famous <br><span>Product Designer</span></h2>
+                  <ul class="sci">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+         <div class="contentBx" id="content5">
+            <div class="card-box">
+                <div class="imgbx">
+                    <img src="img/about.png" alt="">
+                </div>
+                <div class="textbx">
+                  <h2>Someone Famous <br><span>Product Designer</span></h2>
+                  <ul class="sci">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+         <div class="contentBx" id="content6">
+            <div class="card-box">
+                <div class="imgbx">
+                    <img src="img/about.png" alt="">
+                </div>
+                <div class="textbx">
+                  <h2>Someone Famous <br><span>Product Designer</span></h2>
+                  <ul class="sci">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+         <div class="contentBx" id="content7">
+            <div class="card-box">
+                <div class="imgbx">
+                    <img src="img/about.png" alt="">
+                </div>
+                <div class="textbx">
+                  <h2>Someone Famous <br><span>Product Designer</span></h2>
+                  <ul class="sci">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+         <div class="contentBx" id="content8">
+            <div class="card-box">
+                <div class="imgbx">
+                    <img src="img/dp.png" alt="">
+                </div>
+                <div class="textbx">
+                  <h2>Someone Famous <br><span>Product Designer</span></h2>
+                  <ul class="sci">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+   
+</section>
+
+
+
+<script>
+  let imgbx = document.querySelectorAll('.imgbx');
+  let contentBx = document.querySelectorAll('.contentBx');
+
+for(let i= 0; i<imgbx.length; i++){
+  imgbx[i].addEventListener('mouseover', function(){
+    for(let i = 0; i<contentBx.length; i++){
+      contentBx[i].className = 'contentBx';
+    }
+    document.getElementById(this.dataset.id).className = 'contentBx  active';
+    
+    for(let i= 0; i<imgbx.length; i++){
+      imgbx[i].className = 'imgbx';
+    }
+    this.className = 'imgbx active';
+  })
+}
+
+</script>
+
+
+
+
+<!-- Youtube Section -->
+
+<section class="py-5" id="youtube">
+  <div class="container">
+    <h3 class="text-center fw-bold mb-4">
+      SEE MY WORK IN YOUTUBE <span class="underline"></span>
+    </h3>
+
+    <div class="row">
+      <!-- LEFT SIDE -->
+      <div class="col-lg-6 mb-4">
+        <div id="leftSideCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+
+            <!-- Slide 1: YouTube content -->
+            <div class="carousel-item active ">
+              <div class="bg-white shadow rounded p-3 dark-mode">
+                <div class="video-wrapper mb-3">
+                  <img src="img/yt.png" alt="YouTube" />
+                </div>
+                <p class="text-muted">
+                  I believe in writing clean, efficient code that not only
+                  performs well but is also easy to maintain.
+                 
+                </p>
+                <div class="d-flex justify-content-between mt-4">
+                  <div class="counter-box yt-counter-box  text-white text-center px-3 py-2 rounded">
+                    <div>Subscribers</div>
+                    <strong>2000+</strong>
+                  </div>
+
+                  <div class="counter-box bg-secondary text-white text-center px-3 py-2 rounded">
+                    <div>Upload Projects</div>
+                    <strong>500+</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Buy Me a Coffee content -->
+               <div class="carousel-item">
+              <div class="bg-white shadow rounded p-3 dark-mode">
+                <div class="video-wrapper mb-3">
+                  <img src="img/buy2.png" alt="YouTube" />
+                </div>
+                <p class="text-muted">
+                  Support my work by buying me a coffee! Your support helps me keep creating valuable content.
+                </p>
+                <div class="d-flex justify-content-between mt-4">
+                  <div class="counter-box bg-secondary text-white text-center px-3 py-2 rounded">
+                    <div>Coffees Bought</div>
+                    <strong>1000+</strong>
+                  </div>
+                 
+                  <div class="counter-box yt-counter-box text-white text-center px-3 py-2 rounded">
+                    <div>Supporters</div>
+                    <strong>200+</strong>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+     
+          </div>
+
+          <!-- Arrows for leftSideCarousel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#leftSideCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#leftSideCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="col-lg-6">
+        <div id="videoCarousel" class="carousel slide" data-bs-interval="false">
+          <!-- Carousel indicators (dots) -->
+          <div class="carousel-indicators" id="carouselIndicators">
+            <!-- JS will add indicators here -->
+          </div>
+
+          <!-- Carousel slides -->
+          <div class="carousel-inner" id="videoSlides">
+            <!-- JS will add slides here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4 yt-button">
+      <!-- <button class="btn btn-outline-primary">See All Of My Work</button> -->
+      <a href="youtubework.html" class="btn btn-outline-primary button-dark">See All Of My Work</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Array of video IDs
+const videoIDs = [
+  "G5RUtyV3SSY","2_NV3H7URss","i8AqmOT7_IY","pN1WTzm0CkM",
+  "sfwFC5h5k2Q","Wzvqnrz_H_E","Ghf_g7DR220","MQSC40D-Cns",
+  "TelQlIvcgiM","xiYujm3P77c","RCsSQjNY7-U","vV4eHdgiaZQ",
+  
+];
+
+  const slideContainer = document.getElementById("videoSlides");
+  const indicatorsContainer = document.getElementById("carouselIndicators");
+  const chunkSize = 4;
+
+  for (let i = 0; i < videoIDs.length; i += chunkSize) {
+    const videos = videoIDs.slice(i, i + chunkSize);
+    const slideIndex = i / chunkSize;
+    const activeClass = slideIndex === 0 ? 'active' : '';
+
+    // Create carousel item
+    const slide = document.createElement('div');
+    slide.className = `carousel-item ${activeClass}`;
+    slide.innerHTML = `
+      <div class="row g-3">
+        ${videos.map(videoId => `
+          <div class="col-6">
+            <div class="bg-white shadow rounded p-2 text-center">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>
+              </div>
+              <div class="d-flex justify-content-around mt-2">
+                <button class="btn btn-light btn-sm border">
+                  <i class="bi bi-youtube text-danger"></i> Tutorial
+                </button>
+                <button class="btn btn-light btn-sm border">
+                  <i class="bi bi-code-slash text-warning"></i> Code
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    slideContainer.appendChild(slide);
+
+    // Create indicator button
+    const indicator = document.createElement('button');
+    indicator.type = 'button';
+    indicator.setAttribute('data-bs-target', '#videoCarousel');
+    indicator.setAttribute('data-bs-slide-to', slideIndex);
+    indicator.setAttribute('aria-label', `Slide ${slideIndex + 1}`);
+    if (activeClass) {
+      indicator.classList.add('active');
+      indicator.setAttribute('aria-current', 'true');
+    }
+    indicatorsContainer.appendChild(indicator);
+  }
+</script>
+
+
+
+
+
+<!-- Recent Project -->
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const ytTrack = document.querySelector(".yt-carousel-track");
+    const ytDots = document.querySelectorAll(".yt-custom-dots .yt-dot");
+
+    function getYtSlideWidth() {
+      return document.querySelector(".yt-carousel-wrapper").offsetWidth;
+    }
+
+    function goToYtSlide(index) {
+      const slideWidth = getYtSlideWidth();
+      ytTrack.style.transform = `translateX(-${slideWidth * index}px)`;
+
+      ytDots.forEach(dot => dot.classList.remove("active"));
+      ytDots[index].classList.add("active");
+    }
+
+    ytDots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        goToYtSlide(index);
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      const activeIndex = [...ytDots].findIndex(dot => dot.classList.contains("active"));
+      goToYtSlide(activeIndex);
+    });
+
+    goToYtSlide(0);
+  });
+</script>
+
+
+
+<!-- services -->
+
+  <section class="container pb-5" id="service">
+
+
+    <!-- Title -->
+    <h3 class="text-center fw-bold mb-4">
+      SERVICE'S <span class="underline"></span>
+    </h3>
+
+    <!-- Connector Lines -->
+    <div class="connector-wrapper">
+      
+      <div class="connector-horizontal"></div>
+      <div class="line"></div>
+<div class="line line-right"></div>
+<div class="line-center"></div>
+
+
+      <div class="plus-icon">+</div>
+    </div>
+
+   <!-- Service Cards -->
+    <div class="row justify-content-center g-4 mt-4" id="service-cards">
+      <div class="col-md-6 service-card-item">
+        <div class="service-card gradient-dev">
+          <div class="service-text">
+            <h5>Web Development</h5>
+            <p>3+ years of Experience about web Development.</p>
+          </div>
+          <img src="img/services/1.png" alt="Web Development" />
+        </div>
+      </div>
+
+      <div class="col-md-6 service-card-item">
+        <div class="service-card gradient-design">
+          <div class="service-text">
+            <h5>Front-End Development</h5>
+            <p>6+ years of Experience about Front-End Development.</p>
+          </div>
+          <img src="img/services/2.png" alt="Web Design" />
+        </div>
+      </div>
+
+      <div class="col-md-6 service-card-item" style="display:none;">
+        <div class="service-card gradient-dev">
+          <div class="service-text">
+            <h5>UI/UX Design</h5>
+            <p>Creative UI/UX solutions for better experience.</p>
+          </div>
+          <img src="img/services/3.png" alt="UI/UX Design" />
+        </div>
+      </div>
+
+      <div class="col-md-6 service-card-item" style="display:none;">
+        <div class="service-card gradient-design">
+          <div class="service-text">
+            <h5>Figma Design</h5>
+            <p>Creating clean, user-friendly interface designs with Figma.</p>
+          </div>
+          <img src="img/services/4.png" alt="App Development" />
+        </div>
+      </div>   
+       <div class="col-md-6 service-card-item" style="display:none;">
+        <div class="service-card gradient-design">
+          <div class="service-text">
+            <h5>Website Maintenance & Support</h5>
+            <p>Keeping your website secure and up-to-date.</p>
+          </div>
+          <img src="img/services/5.png" alt="App Development" />
+        </div>
+      </div>  
+        <div class="col-md-6 service-card-item" style="display:none;">
+        <div class="service-card gradient-design">
+          <div class="service-text">
+            <h5>E-commerce Development</h5>
+            <p>Developing smooth, secure online stores.</p>
+          </div>
+          <img src="img/services/6.png" alt="App Development" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+    <script>
+    const cards = Array.from(document.querySelectorAll('.service-card-item'));
+    const cardsPerPage = 2;
+    let currentIndex = 0;
+
+    function showCards(index) {
+      // Hide all cards
+      cards.forEach(card => (card.style.display = 'none'));
+
+      // Show cards for current page
+      for (let i = 0; i < cardsPerPage; i++) {
+        let cardIndex = (index + i) % cards.length;
+        cards[cardIndex].style.display = 'block';
+      }
+    }
+
+    showCards(currentIndex); // Initial display
+
+    setInterval(() => {
+      currentIndex = (currentIndex + cardsPerPage) % cards.length;
+      showCards(currentIndex);
+    }, 2000);
+  </script>
+
+
+<!-- typing -->
+    <script>
+   const words = ["Front-End Developer", "Web Developer", "UI Designer", "Content Creator"];
+  const typingEl = document.getElementById("typing");
+
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const current = words[wordIndex];
+
+    // Typing or Deleting
+    if (isDeleting) {
+      typingEl.textContent = current.substring(0, charIndex--);
+    } else {
+      typingEl.textContent = current.substring(0, charIndex++);
+    }
+
+    // Set base speed
+    let delay = isDeleting ? 50 : 100;
+
+    // Word fully typed, wait before deleting
+    if (!isDeleting && charIndex === current.length + 1) {
+      isDeleting = true;
+      delay = 1500;
+      charIndex--; // prevent overflow
+    }
+
+    // Word fully deleted, move to next
+    if (isDeleting && charIndex < 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      delay = 300;
+      charIndex = 0;
+    }
+
+    setTimeout(type, delay);
+  }
+
+  // Start typing when DOM is ready
+  document.addEventListener("DOMContentLoaded", type);
+  </script>
+
+
+  <!-- Recent Project -->
+
+<main class="container  my-5" id="recent">
+<h3 class="text-center fw-bold mb-4">RECENT PROJECT'S <span class="underline"></span></h3>
+
+<!-- Carousel -->
+<div id="projectCarousel" class="carousel slide " data-bs-ride="carousel">
+  <div class="carousel-inner" id="carouselInner"></div>
+</div>
+
+<!-- Dots -->
+<div class="yt-custom-dots mt-4 text-center"></div>
+ <div class="text-center mt-4">
+      <a href="all project.html" class="btn btn-outline-primary button-dark">View all Project</a>
+    </div>
+</main>
+
+
+
+
+<!-- Bubble -->
+<section class="mb-3">
+  <div class="container">
+    <h3 class="text-center fw-bold mb-4">
+      SKILL'S <span class="underline"></span>
+    </h3>
+    <p class="text-center" style="font-size: 18px;">I believe in writing clean, efficient code that not only performs well but is also easy to maintain. By collaborating closely with designers, I ensure that every project I work on is visually appealing and technically robust. </p>
+
+    <div class="skill-container dark-mode">
+   <div class="skill html">HTML</div>
+  <div class="skill css">CSS</div>
+  <div class="skill js">JavaScript</div>
+  <div class="skill react">React JS</div>
+  <div class="skill tailwind">TailwindCSS</div>
+  <div class="skill php">PHP</div>
+  <div class="skill bootstrap">Bootstrap</div>
+  <div class="skill laravel">Laravel</div>
+  <div class="skill logo">Logo</div>
+  <div class="skill uiux">UI/UX</div>
+  </div>
+
+  </div>
+  
+
+
+</section>
+
+<!-- Bubble -->
+  <script>
+  const bubbleContainer = document.querySelector('.skill-container');
+const bubbleElements = bubbleContainer.querySelectorAll('.skill');
+const containerWidthPx = bubbleContainer.offsetWidth;
+
+bubbleElements.forEach(bubbleElem => {
+  const maxLeftPos = containerWidthPx - bubbleElem.offsetWidth;
+  const leftPos = Math.random() * maxLeftPos;
+  bubbleElem.style.left = leftPos + 'px';
+  bubbleElem.style.top = '0px';
+
+  const animDuration = (6 + Math.random() * 6).toFixed(2);
+  const animDelay = (Math.random() * 6).toFixed(2);
+  bubbleElem.style.animationDuration = animDuration + 's';
+  bubbleElem.style.animationDelay = animDelay + 's';
+  bubbleElem.style.animationName = 'bubbleFall';
+
+  bubbleElem.addEventListener('animationend', () => {
+    const newLeftPos = Math.random() * maxLeftPos;
+    bubbleElem.style.left = newLeftPos + 'px';
+    bubbleElem.style.top = '0px';
+
+    const newAnimDuration = (6 + Math.random() * 6).toFixed(2);
+    bubbleElem.style.animationDuration = newAnimDuration + 's';
+    bubbleElem.style.animationDelay = '0s';
+
+    bubbleElem.style.animation = 'none';
+    void bubbleElem.offsetWidth; // trigger reflow to restart animation
+    bubbleElem.style.animation = `bubbleFall ${newAnimDuration}s ease-in-out forwards`;
+  });
+});
+
+
+  </script>
+
+
+<!-- review -->
+<div class="container py-5">
+   <h3 class="text-center fw-bold mb-4">
+      RECENT SERVICE TAKEN <span class="underline"></span>
+    </h3>
+
+  <div id="feedbackCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner ">
+
+      <div class="carousel-item active">
+        <div class="feedback-card mx-auto" style="max-width:550px;">
+          <img src="img/client/review-1.png" alt="Client A">
+          <h5>Emily Carter</h5>
+         <p>
+  <span class="fw-bold">Burger Website Design</span> – Recently, 
+  <span class="fw-bold">Emily Carter</span> purchased this service through my <span class="fw-bold">Buy me a Coffee</span> page and expressed complete satisfaction with the experience.
+</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="feedback-card mx-auto " style="max-width:550px;">
+          <img src="img/client/review-3.png" alt="Client B">
+            <h5>Ryan Thompson</h5>
+       <p>
+      <span class="fw-bold">E-commerce Website Design</span> – Recently, 
+      <span class="fw-bold">Ryan Thompson</span> purchased this service through my 
+      <span class="fw-bold">YouTube</span> channel and shared very positive feedback.
+    </p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="feedback-card mx-auto" style="max-width:550px;">
+          <img src="img/client/review-2.png" alt="Client C">
+            <h5>Sophia Lee</h5>
+         <p>
+      <span class="fw-bold">Portfolio Website Design</span> – Recently, 
+      <span class="fw-bold">Sophia Lee</span> purchased this service through my 
+      <span class="fw-bold">Facebook</span> page and provided highly positive feedback about the overall experience.
+    </p>
+        </div>
+      </div> 
+      <div class="carousel-item">
+        <div class="feedback-card mx-auto" style="max-width:550px;">
+          <img src="img/client/review-4.jpg" alt="Client C">
+       <h5>Dev Raj</h5>
+<p>
+  <span class="fw-bold">Portfolio Website Design</span> – Recently, 
+  <span class="fw-bold">Dev Raj</span> purchased this service through my 
+  <span class="fw-bold">Youtube</span> page and expressed complete satisfaction with the experience.
+</p>
+
+        </div> 
+      </div>
+       <div class="carousel-item">
+        <div class="feedback-card mx-auto" style="max-width:550px;">
+          <img src="img/client/review-5.png" alt="Client C">
+         <h5>Caro</h5>
+ <p>
+      <span class="fw-bold">Website Redesign Service</span> – Recently, 
+      <span class="fw-bold">Caro</span> engaged my services through my 
+      <span class="fw-bold">Upwork</span> profile and shared very positive feedback about the overall experience.
+    </p>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#feedbackCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#feedbackCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+</div>
+
+
+
+<!-- Talk With Me -->
+<section class="py-5 section-talk" id="contact">
+  <div class="container">
+    <h3 class="text-center fw-bold mb-4">
+      TALK WITH ME <span class="underline"></span>
+    </h3>
+    <div class="row align-items-center position-relative">
+      
+ 
+      <div class="col-lg-5 text-center text-lg-start mb-4 mb-lg-0">
+        <p class="mb-2" style="font-size: 18px;" >Send a Massage</p>
+        <h3 class="fw-semibold">Share your Thoughts</h3>
+        
+        <p class="" style="font-size: 18px;">I believe in writing clean, efficient code that not only performs well but is also easy to maintain.</p>
+      </div>
+   <div class="col-lg-2 d-none d-lg-flex justify-content-center">
+  <div class="border-start border-2 border-dark" style="height: 150px;"></div>
+</div>
+
+
+ <div class="col-lg-5">
+  <div class="d-flex justify-content-center justify-content-lg-start gap-3 flex-wrap">
+
+    <div class="icon-wrapper-talk">
+      <a href="#" class="d-flex align-items-center justify-content-center"
+         style="background-color: #3b5998; color: white; width: 48px; height: 48px; font-size: 20px; text-decoration: none;">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <div class="talk-icon-label">Facebook</div>
+    </div>
+
+    <div class="icon-wrapper-talk">
+      <a href="#" class="d-flex align-items-center justify-content-center"
+         style="background-color: #1da1f2; color: white; width: 48px; height: 48px; font-size: 20px; text-decoration: none;">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <div class="talk-icon-label">Twitter</div>
+    </div>
+
+    <div class="icon-wrapper-talk">
+      <a href="#" class="d-flex align-items-center justify-content-center"
+         style="background-color: #0077b5; color: white; width: 48px; height: 48px; font-size: 20px; text-decoration: none;">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <div class="talk-icon-label">LinkedIn</div>
+    </div>
+
+    <div class="icon-wrapper-talk">
+      <a href="#" class="d-flex align-items-center justify-content-center"
+         style="background-color: #333; color: white; width: 48px; height: 48px; font-size: 20px; text-decoration: none;">
+        <i class="fab fa-github"></i>
+      </a>
+      <div class="talk-icon-label">GitHub</div>
+    </div>
+
+    <div class="icon-wrapper-talk">
+      <a href="#" class="d-flex align-items-center justify-content-center"
+         style="background-color: #e4405f; color: white; width: 48px; height: 48px; font-size: 20px; text-decoration: none;">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <div class="talk-icon-label">Instagram</div>
+    </div> 
+    <div class="icon-wrapper-talk">
+      <a href="#" class="d-flex align-items-center justify-content-center"
+         style="background-color: #27A3E3; color: white; width: 48px; height: 48px; font-size: 20px; text-decoration: none;">
+        <i class="fab fa-telegram"></i>
+      </a>
+      <div class="talk-icon-label">Telegram</div>
+    </div>
+
+  </div>
+</div>
+  </div>
+</div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-4 pb-3 dark-mode">
+  <div class="container">
+    <div class="row text-center text-md-start">
+
+      <!-- Work History -->
+      <div class="col-md-4 mb-4 work-history">
+        <h5>Work History</h5>
+        <p>I have worked with clients from over 25+ countries:</p>
+        <div class="flags fs-4">
+          <span class="flag-icon" data-country="USA">🇺🇸</span>
+          <span class="flag-icon" data-country="UK">🇬🇧</span>
+          <span class="flag-icon" data-country="Canada">🇨🇦</span>
+          <span class="flag-icon" data-country="Germany">🇩🇪</span>
+          <span class="flag-icon" data-country="France">🇫🇷</span>
+          <span class="flag-icon" data-country="Italy">🇮🇹</span>
+          <span class="flag-icon" data-country="Spain">🇪🇸</span>
+          <span class="flag-icon" data-country="Brazil">🇧🇷</span>
+          <span class="flag-icon" data-country="India">🇮🇳</span>
+          <span class="flag-icon" data-country="Australia">🇦🇺</span>
+          <span class="flag-icon" data-country="Japan">🇯🇵</span>
+    <span class="flag-icon" data-country="South Korea">🇰🇷</span>
+    <span class="flag-icon" data-country="Russia">🇷🇺</span>
+    <span class="flag-icon" data-country="Mexico">🇲🇽</span>
+    <span class="flag-icon" data-country="South Africa">🇿🇦</span>
+    <span class="flag-icon" data-country="Turkey">🇹🇷</span>
+    <span class="flag-icon" data-country="Netherlands">🇳🇱</span>
+    <span class="flag-icon" data-country="Sweden">🇸🇪</span>
+    <span class="flag-icon" data-country="Switzerland">🇨🇭</span>
+    <span class="flag-icon" data-country="China">🇨🇳</span>
+    <span class="flag-icon" data-country="UAE">🇦🇪</span>
+    <span class="flag-icon" data-country="Egypt">🇪🇬</span>
+    <span class="flag-icon" data-country="Lithuania">🇱🇹</span>
+    <span class="flag-icon" data-country="Indonesia">🇮🇩</span>
+    <span class="flag-icon" data-country="Pakistan">🇵🇰</span>
+    <span class="flag-icon" data-country="Philippines">🇵🇭</span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4 text-center">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="#" class="text-white text-decoration-none">About</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact + Flag -->
+      <div class="col-md-4 mb-4">
+        <h5>Contact Us</h5>
+        <p>Email: dmraihan0007@gmail.com</p>
+        <p>Phone: +88 01300573753</p>
+        <p class="d-flex align-items-center justify-content-center justify-content-md-start">
+          <img src="https://flagcdn.com/w40/bd.png" alt="Bangladesh Flag" width="32" height="24" class="me-2">
+          <span>Bangladesh</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center border-top border-light pt-3 mt-3 footer-copy">
+      <a href="https://t.me/DMweb007" class="mb-0 small">&copy; ABU RAIHAN<span> (DM 007)</span>. All rights reserved.</a>
+      
+    </div>
+  </div>
+</footer>
+
+
+<!-- hamburger -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  if (hamburger && navLinks) {
+    const icon = hamburger.querySelector("i");
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      if (icon) {
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-times");
+      }
+    });
+  }
+});
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Recent Work -->
+<script>
+const projectData = [
+  { title: "Portfolio Website Design", description: "A complete modern portfolio website design featuring responsive layouts, interactive elements, and a modern style suitable for professionals and creatives.", mainImg: "img/allwork/38Portfolio/1.png", link: "https://www.youtube.com/watch?v=G5RUtyV3SSY", buy: "https://buymeacoffee.com/dm007/e/425893", sale: "Sale: 35", thumbs: ["img/allwork/38Portfolio/2.png","img/allwork/38Portfolio/3.png","img/allwork/38Portfolio/4.png","img/allwork/38Portfolio/1.png"] },
+  { title: "Shoe Website Design", description: "A creative burger restaurant website design featuring responsive menus, online ordering, interactive visuals, engaging layout, and a seamless user experience.", mainImg: "img/allwork/17 Shoes/1.png", link: "https://www.youtube.com/watch?v=G5RUtyV3SSY", buy: "https://buymeacoffee.com/dm007/e/425893", sale: "Sale: 44", thumbs: ["img/allwork/17 Shoes/2.png","img/allwork/17 Shoes/3.png","img/allwork/17 Shoes/4.png","img/allwork/17 Shoes/1.png"] },
+  { title: "React Ecommerce Website Design", description: "A modern React ecommerce website design featuring responsive layouts, smooth navigation, product catalog, shopping cart, checkout system, and user-friendly interface.", mainImg: "img/allwork/35 Ecommerce/1.png", link: "https://www.youtube.com/watch?v=G5RUtyV3SSY", buy: "https://buymeacoffee.com/dm007/e/425893", sale: "Sale: 65", thumbs: ["img/allwork/35 Ecommerce/2.png","img/allwork/35 Ecommerce/3.png","img/allwork/35 Ecommerce/4.png","img/allwork/35 Ecommerce/1.png"] },
+  { title: "Ecommerce/Fashion Website Design", description: "A stylish ecommerce fashion website design featuring responsive layouts, product galleries, smooth navigation, secure checkout, and a user-friendly shopping experience.", mainImg: "img/allwork/27Fashion/1.png", link: "https://www.youtube.com/watch?v=G5RUtyV3SSY", buy: "https://buymeacoffee.com/dm007/e/425893", sale: "Sale: 65", thumbs: ["img/allwork/27Fashion/2.png","img/allwork/27Fashion/3.png","img/allwork/27Fashion/4.png","img/allwork/27Fashion/1.png"] },
+  { title: "Modern Portfolio Website Design", description: "A stylish ecommerce fashion website design featuring responsive layouts, product galleries, smooth navigation, secure checkout, and a user-friendly shopping experience.", mainImg: "img/allwork/37Portfolio/1.png", link: "https://www.youtube.com/watch?v=G5RUtyV3SSY", buy: "https://buymeacoffee.com/dm007/e/425893", sale: "Sale: 65", thumbs: ["img/allwork/37Portfolio/2.png","img/allwork/37Portfolio/3.jpg","img/allwork/37Portfolio/4.png","img/allwork/37Portfolio/1.png"] },
+  { title: "Movie Website Design", description: "A stylish ecommerce fashion website design featuring responsive layouts, product galleries, smooth navigation, secure checkout, and a user-friendly shopping experience.", mainImg: "img/allwork/36Movie/1.png", link: "https://www.youtube.com/watch?v=G5RUtyV3SSY", buy: "https://buymeacoffee.com/dm007/e/425893", sale: "Sale: 55", thumbs: ["img/allwork/36Movie/2.png","img/allwork/36Movie/3.png","img/allwork/36Movie/4.png","img/allwork/36Movie/5.png"] }
+];
+
+// Change main image on thumbnail click
+function changeImage(img) {
+  const card = img.closest('.card');
+  card.querySelector('.product-img').src = img.src;
+}
+
+// Generate card HTML
+function createCardHTML(project){
+  const thumbsHTML = project.thumbs.map(src => `<img src="${src}" alt="Thumbnail" onclick="changeImage(this)" />`).join('');
+  return `
+  <div class="col-12 recent-project-main">
+    <div class="card p-3 mb-2 shadow-sm dark-mode">
+      <div class="d-flex align-items-center flex-wrap flex-md-nowrap justify-content-between">
+        <div class="image-thumbs-wrapper">
+          <img src="${project.mainImg}" class="product-img rounded mb-2">
+          <div class="thumbs-vertical">${thumbsHTML}</div>
+        </div>
+        <div class="d-none d-md-block vertical-line"></div>
+        <div class="flex-grow-1 text-center px-3 mb-3 mb-md-0">
+          <h3 class="h5 mb-2">${project.title}</h3>
+          <p class="mb-2 project-des">${project.description}</p>
+          <a href="${project.link}" class="btn btn-sm1 youtube-btn" target="_blank">See Tutorial <i class="fab fa-youtube ms-1"></i></a>
+          <a href="${project.buy}" class="btn btn-sm1 ">Source Code</a>
+        </div>
+        <div class="d-none d-md-block vertical-line"></div>
+        <div class="text-center ms-md-4 right-side">
+          <h4 class="mb-1 text-success">${project.sale}</h4>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-half-alt text-warning"></i>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+// Split projects into slides (2 per slide)
+const slides = [];
+for(let i=0;i<projectData.length;i+=2){
+  slides.push(projectData.slice(i,i+2).map(createCardHTML).join(''));
+}
+
+const carouselInner = document.getElementById('carouselInner');
+const carouselEl = document.getElementById('projectCarousel');
+const dotsContainer = document.querySelector('.yt-custom-dots');
+
+slides.forEach((slideHTML,index)=>{
+  const slide = document.createElement('div');
+  slide.className = 'carousel-item' + (index===0?' active':'');
+  slide.innerHTML = `<div class="row">${slideHTML}</div>`;
+  carouselInner.appendChild(slide);
+
+  const dot = document.createElement('span');
+  dot.className = 'yt-dot' + (index===0?' active':'');
+  dot.dataset.slide = index;
+  dotsContainer.appendChild(dot);
+
+  dot.addEventListener('click',()=>{
+    carousel.to(index);
+    document.querySelectorAll('.yt-dot').forEach(d=>d.classList.remove('active'));
+    dot.classList.add('active');
+  });
+});
+
+const carousel = new bootstrap.Carousel(carouselEl,{interval:5000,ride:'carousel',wrap:true,pause:false});
+
+carouselEl.addEventListener('slid.bs.carousel',(e)=>{
+  const activeIndex = e.to;
+  document.querySelectorAll('.yt-dot').forEach((dot,idx)=>{
+    dot.classList.toggle('active', idx===activeIndex);
+  });
+});
+</script>
+
+<!-- mainnav fixed -->
+<script>
+  window.addEventListener('scroll', function () {
+  const topNavbar = document.querySelector('.top-navbar');
+  const secondNavbar = document.querySelector('.navbar-secound');
+
+  if (!secondNavbar) return;
+
+  let placeholder = document.querySelector('#navbar-placeholder');
+
+  if (!placeholder) {
+    placeholder = document.createElement('div');
+    placeholder.id = 'navbar-placeholder';
+    secondNavbar.parentNode.insertBefore(placeholder, secondNavbar);
+  }
+
+  if (window.scrollY > 10) {
+    if (topNavbar) topNavbar.style.display = 'none';
+    secondNavbar.classList.add('fixed-top', 'shadow-sm');
+    placeholder.style.height = `${secondNavbar.offsetHeight}px`;
+  } else {
+    if (topNavbar) topNavbar.style.display = 'flex'; // your top navbar uses flex
+    secondNavbar.classList.remove('fixed-top', 'shadow-sm');
+    placeholder.style.height = '0px';
+  }
+});
+
+</script>
+
+
+<script src="script.js"></script>
+</body>
+</html>

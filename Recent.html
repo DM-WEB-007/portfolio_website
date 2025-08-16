@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>30+ Projects Carousel</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #E5F5FF;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.product-img {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.image-thumbs-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbs-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.thumbs-vertical img {
+  width: 60px;
+  height: 34px; 
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.thumbs-vertical img:hover {
+  border-color: #0B87D7;
+}
+
+.btn-sm {
+  background-color: #0B87D7;
+  color: #fff;
+}
+.btn-sm:hover {
+  background-color: #0967a6;
+  color:#fff;
+}
+
+.youtube-btn {
+  background-color: #FF0000;
+  color: #fff;
+}
+.youtube-btn:hover {
+  background-color: #cc0000;
+  color: #fff;
+}
+
+/* Custom dots */
+.yt-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.yt-dot.active {
+  background-color: #0B87D7;
+  width: 30px;
+  border-radius: 10px;
+}
+
+  .vertical-line {
+  border-left: 1px solid #ddd;
+  height: 80px; /* Adjust this height as needed to span between description and price */
+  margin: 0 20px; /* Optional: add horizontal spacing */
+}
+.project-des {
+  max-width: 600px;     /* won't exceed 500px on large screens */
+  width: 100%;          /* fits smaller screens */
+  margin: 0 auto;       /* center it horizontally */
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<main class="container my-5">
+<h3 class="text-center fw-bold mb-4">SEE MY WORK <span class="underline"></span></h3>
+
+<!-- Carousel -->
+<div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner" id="carouselInner"></div>
+</div>
+
+<!-- Dots -->
+<div class="yt-custom-dots mt-4 text-center"></div>
+ <div class="text-center mt-4">
+      <a href="all project.html" class="btn btn-outline-primary">View all Project</a>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const projectData = [
+  { title: "Portfolio Website Design", description: "A complete portfolio website design featuring responsive layouts, interactive elements, and a modern style suitable for professionals and creatives.", mainImg: "img/allwork/38Portfolio/1.png", link: "https://www.youtube.com/watch?v=G5RUtyV3SSY", buy: "https://buymeacoffee.com/dm007/e/425893", sale: "Sale: 35", thumbs: ["img/allwork/38Portfolio/2.png","img/allwork/38Portfolio/3.png","img/allwork/38Portfolio/4.png","img/allwork/38Portfolio/1.png"] },
+  { title: "Shoe Website Design", description: "A creative burger restaurant website design featuring responsive menus, online ordering, interactive visuals, engaging layout, and a seamless user experience.", mainImg: "img/allwork/17 Shoes/1.png", link: "https://www.youtube.com/watch?v=G5RUtyV3SSY", buy: "https://buymeacoffee.com/dm007/e/425893", sale: "Sale: 44", thumbs: ["img/allwork/17 Shoes/2.png","img/allwork/17 Shoes/3.png","img/allwork/17 Shoes/4.png","img/allwork/17 Shoes/1.png"] },
+  { title: "React Ecommerce Website Design", description: "A modern React ecommerce website design featuring responsive layouts, smooth navigation, product catalog, shopping cart, checkout system, and user-friendly interface.", mainImg: "img/allwork/35 Ecommerce/1.png", link: "https://www.youtube.com/watch?v=G5RUtyV3SSY", buy: "https://buymeacoffee.com/dm007/e/425893", sale: "Sale: 65", thumbs: ["img/allwork/35 Ecommerce/2.png","img/allwork/35 Ecommerce/3.png","img/allwork/35 Ecommerce/4.png","img/allwork/35 Ecommerce/1.png"] },
+  { title: "Ecommerce/Fashion Website Design", description: "A stylish ecommerce fashion website design featuring responsive layouts, product galleries, smooth navigation, secure checkout, and a user-friendly shopping experience.", mainImg: "img/allwork/27Fashion/1.png", link: "https://www.youtube.com/watch?v=G5RUtyV3SSY", buy: "https://buymeacoffee.com/dm007/e/425893", sale: "Sale: 65", thumbs: ["img/allwork/27Fashion/2.png","img/allwork/27Fashion/3.png","img/allwork/27Fashion/4.png","img/allwork/27Fashion/1.png"] },
+  { title: "Modern Portfolio Website Design", description: "A stylish ecommerce fashion website design featuring responsive layouts, product galleries, smooth navigation, secure checkout, and a user-friendly shopping experience.", mainImg: "img/allwork/37Portfolio/1.png", link: "https://www.youtube.com/watch?v=G5RUtyV3SSY", buy: "https://buymeacoffee.com/dm007/e/425893", sale: "Sale: 65", thumbs: ["img/allwork/37Portfolio/2.png","img/allwork/37Portfolio/3.jpg","img/allwork/37Portfolio/4.png","img/allwork/37Portfolio/1.png"] },
+  { title: "Movie Website Design", description: "A stylish ecommerce fashion website design featuring responsive layouts, product galleries, smooth navigation, secure checkout, and a user-friendly shopping experience.", mainImg: "img/allwork/36Movie/1.png", link: "https://www.youtube.com/watch?v=G5RUtyV3SSY", buy: "https://buymeacoffee.com/dm007/e/425893", sale: "Sale: 55", thumbs: ["img/allwork/36Movie/2.png","img/allwork/36Movie/3.png","img/allwork/36Movie/4.png","img/allwork/36Movie/5.png"] }
+];
+
+// Change main image on thumbnail click
+function changeImage(img) {
+  const card = img.closest('.card');
+  card.querySelector('.product-img').src = img.src;
+}
+
+// Generate card HTML
+function createCardHTML(project){
+  const thumbsHTML = project.thumbs.map(src => `<img src="${src}" alt="Thumbnail" onclick="changeImage(this)" />`).join('');
+  return `
+  <div class="col-12">
+    <div class="card p-3 mb-2 shadow-sm">
+      <div class="d-flex align-items-center flex-wrap flex-md-nowrap justify-content-between">
+        <div class="image-thumbs-wrapper">
+          <img src="${project.mainImg}" class="product-img rounded mb-2">
+          <div class="thumbs-vertical">${thumbsHTML}</div>
+        </div>
+        <div class="d-none d-md-block vertical-line"></div>
+        <div class="flex-grow-1 text-center px-3 mb-3 mb-md-0">
+          <h3 class="h5 mb-2">${project.title}</h3>
+          <p class="mb-2 project-des">${project.description}</p>
+          <a href="${project.link}" class="btn btn-sm youtube-btn" target="_blank">See Tutorial <i class="fab fa-youtube ms-1"></i></a>
+          <a href="${project.buy}" class="btn btn-sm">Source Code</a>
+        </div>
+        <div class="d-none d-md-block vertical-line"></div>
+        <div class="text-center ms-md-4 right-side">
+          <h4 class="mb-1 text-success">${project.sale}</h4>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-half-alt text-warning"></i>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+// Split projects into slides (2 per slide)
+const slides = [];
+for(let i=0;i<projectData.length;i+=2){
+  slides.push(projectData.slice(i,i+2).map(createCardHTML).join(''));
+}
+
+const carouselInner = document.getElementById('carouselInner');
+const carouselEl = document.getElementById('projectCarousel');
+const dotsContainer = document.querySelector('.yt-custom-dots');
+
+slides.forEach((slideHTML,index)=>{
+  const slide = document.createElement('div');
+  slide.className = 'carousel-item' + (index===0?' active':'');
+  slide.innerHTML = `<div class="row">${slideHTML}</div>`;
+  carouselInner.appendChild(slide);
+
+  const dot = document.createElement('span');
+  dot.className = 'yt-dot' + (index===0?' active':'');
+  dot.dataset.slide = index;
+  dotsContainer.appendChild(dot);
+
+  dot.addEventListener('click',()=>{
+    carousel.to(index);
+    document.querySelectorAll('.yt-dot').forEach(d=>d.classList.remove('active'));
+    dot.classList.add('active');
+  });
+});
+
+const carousel = new bootstrap.Carousel(carouselEl,{interval:3000,ride:'carousel',wrap:true,pause:false});
+
+carouselEl.addEventListener('slid.bs.carousel',(e)=>{
+  const activeIndex = e.to;
+  document.querySelectorAll('.yt-dot').forEach((dot,idx)=>{
+    dot.classList.toggle('active', idx===activeIndex);
+  });
+});
+</script>
+</body>
+</html>

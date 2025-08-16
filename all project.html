@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>30+ Projects</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #E5F5FF;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+
+    .col-12 {
+      transition: all 0.3s ease;
+    }
+
+    .vertical-line {
+      border-left: 1px solid #ddd;
+      height: 100%;
+    }
+
+    .product-img {
+      width: 100%;
+      max-width: 300px;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Container for main image and vertical thumbnails */
+    .image-thumbs-wrapper {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Vertical thumbnails container */
+    .thumbs-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .thumbs-vertical img {
+      width: 60px;
+      height: 34px; /* keep 16:9 ratio */
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .thumbs-vertical img:hover {
+      border-color: #0B87D7;
+    }
+    .vertical-line {
+  border-left: 1px solid #ddd;
+  height: 80px; /* Adjust this height as needed to span between description and price */
+  margin: 0 20px; /* Optional: add horizontal spacing */
+}
+
+
+    /* Back button styles */
+    #backBtn {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 1rem;
+    }
+    .custom-card {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.btn-sm{
+  background-color: #0B87D7;
+  color: #fff;
+}
+.btn-sm:hover{
+  background-color: #0967a6;
+  color:#fff;
+}
+.project-des {
+  max-width: 600px;     /* won't exceed 500px on large screens */
+  width: 100%;          /* fits smaller screens */
+  margin: 0 auto;       /* center it horizontally */
+  text-align: center;
+}
+.youtube-btn {
+  background-color: #FF0000;
+  color: #fff;
+}
+.youtube-btn:hover {
+  background-color: #cc0000; /* darker red on hover */
+  color: #fff;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="myallWork container">
+
+    <!-- Back button -->
+    <button id="backBtn" onclick="window.location.href='index.html'" class="btn btn-secondary">
+      ← <span class="back-text">Back</span>
+    </button>
+
+    <!-- Heading -->
+    <h3 class="text-center fw-bold mb-4">
+      SEE MY WORK <span class="underline"></span>
+    </h3>
+
+    <!-- Project Cards Container -->
+    <div class="row gy-4" id="projectContainer"></div>
+    
+
+    <!-- See More Button -->
+    <div class="text-center mt-4">
+      <button class="btn btn-outline-primary" id="seeMoreBtn">See More</button>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Each project now has 4 thumbnails in thumbs array
+  const projectData = [
+    {
+      title: "Portfolio Website Design",
+      description: "A complete portfolio website design featuring responsive layouts, interactive elements, and a modern style suitable for professionals and creatives.",
+      mainImg: "img/allwork/38Portfolio/1.png",
+       link: "https://www.youtube.com/watch?v=G5RUtyV3SSY",
+       buy: "https://buymeacoffee.com/dm007/e/425893",
+      
+      sale: "Sale: 35",
+      thumbs: [
+        "img/allwork/38Portfolio/2.png",
+        "img/allwork/38Portfolio/3.png",
+        "img/allwork/38Portfolio/4.png",
+        "img/allwork/38Portfolio/1.png",
+      ]
+    }, 
+    {
+      title: "Shoe Website Design",
+description: "A creative shoe store website design featuring responsive navigation, interactive product galleries, online shopping functionality, engaging visuals, and a seamless user experience.",
+
+      mainImg: "img/allwork/17 Shoes/1.png",
+       link: "https://www.youtube.com/watch?v=kyFHIVET1BY&t=1648s",
+       buy: "https://buymeacoffee.com/dm007/e/269669",
+      
+      sale: "Sale: 44",
+      thumbs: [
+        "img/allwork/17 Shoes/2.png",
+        "img/allwork/17 Shoes/3.png",
+        "img/allwork/17 Shoes/4.png",
+        "img/allwork/17 Shoes/1.png",
+      ]
+    },
+    {
+      title: "React Ecommerce Website Design",
+      description: "A modern React ecommerce website design featuring responsive layouts, smooth navigation, product catalog, shopping cart, checkout system, and user-friendly interface.",
+
+      mainImg: "img/allwork/35 Ecommerce/1.png",
+       link: "https://www.youtube.com/watch?v=xiYujm3P77c&t=3s",
+       buy: "https://buymeacoffee.com/dm007/e/421497",
+      
+      sale: "Sale: 65",
+      thumbs: [
+        "img/allwork/35 Ecommerce/2.png",
+        "img/allwork/35 Ecommerce/3.png",
+        "img/allwork/35 Ecommerce/4.png",
+        "img/allwork/35 Ecommerce/1.png",
+      ]
+    },  
+     {
+      title: "Ecommerce/Fashion Website Design",
+      description: "A stylish ecommerce fashion website design featuring responsive layouts, product galleries, smooth navigation, secure checkout, and a user-friendly shopping experience.",
+
+      mainImg: "img/allwork/27Fashion/1.png",
+       link: "https://www.youtube.com/watch?v=sfwFC5h5k2Q",
+       buy: "https://buymeacoffee.com/dm007/e/367305",
+      
+      sale: "Sale: 65",
+      thumbs: [
+        "img/allwork/27Fashion/2.png",
+        "img/allwork/27Fashion/3.png",
+        "img/allwork/27Fashion/4.png",
+        "img/allwork/27Fashion/1.png",
+      ]
+    },  
+    {
+    title: "Modern Portfolio Website Design",
+description: "A sleek and stylish portfolio website design featuring responsive layouts, interactive project galleries, smooth navigation, and an engaging user experience.",
+
+
+      mainImg: "img/allwork/37Portfolio/1.png",
+       link: "https://www.youtube.com/watch?v=G5RUtyV3SSY",
+       buy: "https://buymeacoffee.com/dm007/e/425893",
+      
+      sale: "Sale: 65",
+      thumbs: [
+        "img/allwork/37Portfolio/2.png",
+        "img/allwork/37Portfolio/3.jpg",
+        "img/allwork/37Portfolio/4.png",
+        "img/allwork/37Portfolio/1.png",
+      ]
+    }, 
+     {
+  title: "Movie Website Design",
+description: "A stylish movie website design featuring responsive layouts, interactive movie galleries, smooth navigation, genre filters, search functionality, and an engaging user experience.",
+
+
+      mainImg: "img/allwork/36Movie/1.png",
+       link: "https://www.youtube.com/watch?v=cXat41PuzPg",
+       buy: "https://buymeacoffee.com/dm007/e/422396",
+      
+      sale: "Sale: 55",
+      thumbs: [
+        "img/allwork/36Movie/2.png",
+        "img/allwork/36Movie/3.png",
+        "img/allwork/36Movie/4.png",
+        "img/allwork/36Movie/5.png",
+      ]
+    },
+    {
+      title: "Burger Website Design",
+      description: "A creative burger restaurant website design featuring responsive menus, online ordering, interactive visuals, engaging layout, and a seamless user experience.",
+
+      mainImg: "img/allwork/34Burger/1.png",
+       link: "https://www.youtube.com/watch?v=i8AqmOT7_IY",
+       buy: "https://buymeacoffee.com/dm007/e/402897",
+      
+      sale: "Sale: 55",
+      thumbs: [
+        "img/allwork/34Burger/2.png",
+        "img/allwork/34Burger/3.png",
+        "img/allwork/34Burger/4.png",
+        "img/allwork/34Burger/1.png",
+      ]
+    },   
+     {
+     title: "Simple React Portfolio Website Design",
+description: "A clean and modern React portfolio website design featuring responsive layouts, smooth navigation, interactive components, and a professional showcase for projects and skills.",
+
+
+      mainImg: "img/allwork/33react/1.png",
+       link: "https://www.youtube.com/watch?v=8NTUQrMHqqY",
+       buy: "https://buymeacoffee.com/dm007/e/405618",
+      
+      sale: "Sale: 55",
+      thumbs: [
+        "img/allwork/33react/2.png",
+        "img/allwork/33react/1.png",
+        "img/allwork/33react/2.png",
+        "img/allwork/33react/1.png",
+      ]
+    }, 
+     {
+     title: "Shoe Website Design",
+description: "A stylish and responsive shoe store website design featuring product galleries, smooth navigation, interactive visuals, engaging layouts, and a seamless shopping experience.",
+
+
+      mainImg: "img/allwork/32Shoe/1.png",
+       link: "https://www.youtube.com/watch?v=i89EbErxZ64&t=1s",
+       buy: "https://buymeacoffee.com/dm007/e/397799",
+      
+      sale: "Sale: 55",
+      thumbs: [
+        "img/allwork/32Shoe/2.png",
+        "img/allwork/32Shoe/3.png",
+        "img/allwork/32Shoe/4.png",
+        "img/allwork/32Shoe/1.png",
+      ]
+    },
+     {
+      title: "Portfolio Website Design",
+      description: "A sleek and stylish portfolio website design featuring responsive layouts, interactive project galleries, smooth navigation, and an engaging user experience.",
+
+      mainImg: "img/allwork/31portfolio/1.png",
+       link: "https://www.youtube.com/watch?v=2_NV3H7URss&t=16s",
+       buy: "https://buymeacoffee.com/dm007/e/397106",
+      
+      sale: "Sale: 39",
+      thumbs: [
+        "img/allwork/31portfolio/2.jpg",
+        "img/allwork/31portfolio/3.jpg",
+        "img/allwork/31portfolio/4.jpg",
+        "img/allwork/31portfolio/1.png",
+      ]
+    },  {
+title: "Trading Website Design",
+description: "A modern and responsive trading platform website design featuring real-time market data, intuitive navigation, interactive charts, engaging layouts, and a seamless user experience.",
+
+
+      mainImg: "img/allwork/30Trade/1.png",
+       link: "https://www.youtube.com/watch?v=X26pYxiqZ6s",
+       buy: "https://buymeacoffee.com/dm007/e/388091",
+      
+      sale: "Sale: 55",
+      thumbs: [
+        "img/allwork/30Trade/2.png",
+        "img/allwork/30Trade/3.png",
+        "img/allwork/30Trade/4.png",
+        "img/allwork/30Trade/1.png",
+      ]
+    },{
+     title: "Pet/Animal Website Design",
+description: "A friendly and engaging pet and animal website design featuring responsive layouts, adorable visuals, easy navigation, interactive features, and a warm, user-friendly experience.",
+
+
+      mainImg: "img/allwork/29Pet/1.png",
+       link: "https://www.youtube.com/watch?v=pN1WTzm0CkM&t=952s",
+       buy: "https://buymeacoffee.com/dm007/e/385303",
+      
+      sale: "Sale: 55",
+      thumbs: [
+        "img/allwork/29Pet/2.png",
+        "img/allwork/29Pet/3.png",
+        "img/allwork/29Pet/4.png",
+        "img/allwork/29Pet/1.png",
+      ]
+    },{
+      title: "UI/UX Design Figma",
+description: "A modern and creative UI/UX design created in Figma, featuring clean layouts, intuitive navigation, interactive components, and a user-focused experience for web and mobile applications.",
+
+
+      mainImg: "img/allwork/28 UIUX/1.png",
+       link: "https://www.youtube.com/watch?v=X-feh4PtCJA",
+       buy: "https://buymeacoffee.com/dm007/e/416783",
+      
+      sale: "Sale: 85",
+      thumbs: [
+        "img/allwork/28 UIUX/2.png",
+        "img/allwork/28 UIUX/3.png",
+        "img/allwork/28 UIUX/4.png",
+        "img/allwork/28 UIUX/1.png",
+      ]
+    },{
+      title: "Travel Website Design",
+description: "An inspiring and responsive travel website design featuring stunning destination visuals, smooth navigation, trip booking functionality, interactive elements, and an engaging user experience.",
+
+
+      mainImg: "img/allwork/26Travel/1.png",
+       link: "https://www.youtube.com/watch?v=rkpNIfbdnX4",
+       buy: "https://buymeacoffee.com/dm007/e/355172",
+      
+      sale: "Sale: 29",
+      thumbs: [
+        "img/allwork/26Travel/2.png",
+        "img/allwork/26Travel/3.png",
+        "img/allwork/26Travel/4.png",
+        "img/allwork/26Travel/1.png",
+      ]
+    },{
+     title: "Ecommerce Website Design",
+description: "A modern and responsive eCommerce website design featuring product galleries, smooth navigation, secure checkout, interactive visuals, and an engaging shopping experience.",
+
+      mainImg: "img/allwork/25Ecommerce/1.png",
+       link: "https://www.youtube.com/watch?v=G5RUtyV3SSY",
+       buy: "https://buymeacoffee.com/dm007/e/351253",
+      
+      sale: "Sale: 32",
+      thumbs: [
+        "img/allwork/25Ecommerce/2.png",
+        "img/allwork/25Ecommerce/3.png",
+        "img/allwork/25Ecommerce/4.png",
+        "img/allwork/25Ecommerce/1.png",
+      ]
+    },{
+      title: "Complete Grocery Website Frontend and Backend",
+description: "A full-featured grocery website with both frontend and backend, featuring responsive layouts, product management, shopping cart functionality, secure checkout, and a smooth user experience.",
+
+      mainImg: "img/allwork/24Complete Grocery/1.png",
+       link: "https://www.youtube.com/watch?v=o4434chR7Is&t=7s",
+       buy: "https://buymeacoffee.com/dm007/e/348212",
+      
+      sale: "Sale: 44",
+      thumbs: [
+        "img/allwork/24Complete Grocery/2.png",
+        "img/allwork/24Complete Grocery/3.png",
+        "img/allwork/24Complete Grocery/4.png",
+        "img/allwork/24Complete Grocery/1.png",
+      ]
+    },{
+     title: "Restaurant Website Design",
+description: "A creative and responsive restaurant website design featuring digital menus, online ordering, mouth-watering visuals, engaging layouts, and a seamless dining experience.",
+
+      mainImg: "img/allwork/23Restaurant/1.png",
+       link: "https://www.youtube.com/watch?v=Ghf_g7DR220&t=2165s",
+       buy: "https://buymeacoffee.com/dm007/e/343028",
+      
+      sale: "Sale: 44",
+      thumbs: [ 
+        "img/allwork/23Restaurant/2.png",
+        "img/allwork/23Restaurant/3.png",
+        "img/allwork/23Restaurant/4.png",
+        "img/allwork/23Restaurant/1.png",
+      ]
+    },{
+    title: "Coffee Shop Website Design",
+description: "A warm and inviting coffee shop website design featuring responsive layouts, digital menus, online ordering, rich visuals, engaging layouts, and a smooth user experience.",
+
+      mainImg: "img/allwork/22Coffee/1.png",
+       link: "https://www.youtube.com/watch?v=MQSC40D-Cns&t=9s",
+       buy: "https://buymeacoffee.com/dm007/e/328349",
+      
+      sale: "Sale: 23",
+      thumbs: [
+        "img/allwork/22Coffee/2.png",
+        "img/allwork/22Coffee/3.png",
+        "img/allwork/22Coffee/4.png",
+        "img/allwork/22Coffee/1.png",
+      ]
+    },{
+      title: "Pizza/Restaurant Website Design",
+description: "A delicious and engaging pizza restaurant website design featuring responsive menus, online ordering, interactive visuals, mouth-watering layouts, and a seamless user experience.",
+
+      mainImg: "img/allwork/21Pizza/1.png",
+       link: "https://www.youtube.com/watch?v=ExqR0O_nO28",
+       buy: "https://buymeacoffee.com/dm007/e/326148",
+      
+      sale: "Sale: 38",
+      thumbs: [
+        "img/allwork/21Pizza/2.png",
+        "img/allwork/21Pizza/3.png",
+        "img/allwork/21Pizza/4.png",
+        "img/allwork/21Pizza/1.png",
+      ]
+    },
+   {
+   title: "Burger/Restaurant Website Design",
+description: "A tasty and responsive burger restaurant website design featuring digital menus, online ordering, interactive visuals, appealing layouts, and a smooth user experience.",
+
+      mainImg: "img/allwork/20burger/1.png",
+       link: "https://www.youtube.com/watch?v=d2Vncxk3WPI&t=2s",
+       buy: "https://buymeacoffee.com/dm007/e/323348",
+      
+      sale: "Sale: 18",
+      thumbs: [
+        "img/allwork/20burger/2.png",
+        "img/allwork/20burger/3.png",
+        "img/allwork/20burger/4.png",
+        "img/allwork/20burger/1.png",
+      ]
+    },{
+     title: "Digital Marketing Agency Website Design",
+description: "A modern and professional digital marketing agency website design featuring responsive layouts, interactive elements, portfolio showcases, client engagement features, and a seamless user experience.",
+
+      mainImg: "img/allwork/19Degital/1.png",
+       link: "https://www.youtube.com/watch?v=G5RUtyV3SSY",
+       buy: "https://buymeacoffee.com/dm007/e/288703",
+      
+      sale: "Sale: 16",
+      thumbs: [
+        "img/allwork/19Degital/2.png",
+        "img/allwork/19Degital/3.png",
+        "img/allwork/19Degital/4.png",
+        "img/allwork/19Degital/1.png",
+      ]
+    },
+   {
+     title: "Coffee Shop Website Design",
+description: "A cozy and modern coffee shop website design featuring responsive layouts, digital menus, online ordering, interactive visuals, engaging design, and a smooth user experience.",
+
+      mainImg: "img/allwork/18Coffee/1.png",
+       link: "https://www.youtube.com/watch?v=uRTWOiT7z-A&t=508s",
+       buy: "https://buymeacoffee.com/dm007/e/267104",
+      
+      sale: "Sale: 57",
+      thumbs: [
+        "img/allwork/18Coffee/2.png",
+        "img/allwork/18Coffee/3.png",
+        "img/allwork/18Coffee/4.png",
+        "img/allwork/18Coffee/1.png",
+      ]
+    },{
+    title: "Shoe Website Design",
+description: "A stylish and responsive shoe store website design featuring product galleries, smooth navigation, interactive visuals, engaging layouts, and a seamless shopping experience.",
+
+      mainImg: "img/allwork/17 Shoes/1.png",
+       link: "https://www.youtube.com/watch?v=kyFHIVET1BY&t=1648s",
+       buy: "https://buymeacoffee.com/dm007/e/269669",
+      
+      sale: "Sale: 12",
+      thumbs: [
+        "img/allwork/17 Shoes/2.png",
+        "img/allwork/17 Shoes/3.png",
+        "img/allwork/17 Shoes/4.png",
+        "img/allwork/17 Shoes/1.png",
+      ]
+    },{
+     title: "Fresh Grocery Website Design",
+description: "A modern and responsive grocery website design featuring fresh product showcases, easy navigation, online ordering, interactive visuals, and an engaging user experience.",
+
+      mainImg: "img/allwork/16Grocery/1.png",
+       link: "https://www.youtube.com/watch?v=RCsSQjNY7-U&t=112s",
+       buy: "https://buymeacoffee.com/dm007/e/265365",
+      
+      sale: "Sale: 14",
+      thumbs: [
+        "img/allwork/16Grocery/2.png",
+        "img/allwork/16Grocery/3.png",
+        "img/allwork/16Grocery/4.png",
+        "img/allwork/16Grocery/1.png",
+      ]
+    },{
+    title: "Photographer Portfolio Website Design",
+description: "A sleek and responsive photographer portfolio website design featuring high-quality image galleries, smooth navigation, interactive visuals, engaging layouts, and a professional showcase of work.",
+
+      mainImg: "img/allwork/15 Photographer/1.jpg",
+       link: "https://youtu.be/vV4eHdgiaZQ",
+       buy: "https://buymeacoffee.com/dm007/e/355172",
+      
+      sale: "Sale: 49",
+      thumbs: [
+        "img/allwork/15 Photographer/2.png",
+        "img/allwork/15 Photographer/3.png",
+        "img/allwork/15 Photographer/4.png",
+        "img/allwork/15 Photographer/1.jpg",
+      ]
+    },{
+    title: "Portfolio Website Design",
+description: "A modern and responsive portfolio website design featuring clean layouts, smooth navigation, interactive elements, engaging visuals, and an effective showcase of projects and skills.",
+
+      mainImg: "img/allwork/14 portfolio/1.png",
+       link: "https://www.youtube.com/watch?v=8g2nkZv23NE&t=18s",
+       buy: "https://buymeacoffee.com/dm007/e/260216",
+      
+      sale: "Sale: 17",
+      thumbs: [
+        "img/allwork/14 portfolio/2.png",
+        "img/allwork/14 portfolio/3.png",
+        "img/allwork/14 portfolio/4.png",
+        "img/allwork/14 portfolio/1.png",
+      ]
+    },{
+   title: "Car Buy/Sell Website Design",
+description: "A modern and responsive car buy/sell website design featuring vehicle listings, smooth navigation, interactive search filters, engaging visuals, and a seamless user experience.",
+
+      mainImg: "img/allwork/13 car/1.jpg",
+       link: "https://www.youtube.com/watch?v=TelQlIvcgiM&t=164s",
+       buy: "https://buymeacoffee.com/dm007/e/274446",
+      
+      sale: "Sale: 22",
+      thumbs: [
+        "img/allwork/13 car/2.png",
+        "img/allwork/13 car/3.png",
+        "img/allwork/13 car/4.png",
+        "img/allwork/13 car/1.jpg",
+      ]
+    },{
+     title: "Cold Store Website Design",
+description: "A clean and responsive cold storage website design featuring product showcases, easy navigation, interactive visuals, engaging layouts, and a seamless user experience.",
+
+      mainImg: "img/allwork/12 cold/1.jpg",
+       link: "https://www.youtube.com/watch?v=EekmZ3KCbvM&t=9s",
+       buy: "https://buymeacoffee.com/dm007/e/238186",
+      
+      sale: "Sale: 21",
+      thumbs: [
+        "img/allwork/12 cold/1.jpg",
+        "img/allwork/12 cold/1.jpg",
+        "img/allwork/12 cold/1.jpg",
+        "img/allwork/12 cold/1.jpg",
+      ]
+    },
+   {
+    title: "Restaurant Website Design",
+description: "A modern and responsive restaurant website design featuring digital menus, online ordering, mouth-watering visuals, interactive elements, engaging layouts, and a seamless dining experience.",
+
+      mainImg: "img/allwork/11 Restaurant Website/1.jpg",
+       link: "https://www.youtube.com/watch?v=0tAoM_ZD5Co&t=1511s",
+       buy: "https://buymeacoffee.com/dm007/e/215699",
+      
+      sale: "Sale: 11",
+      thumbs: [
+        "img/allwork/11 Restaurant Website/2.png",
+        "img/allwork/11 Restaurant Website/3.png",
+        "img/allwork/11 Restaurant Website/4.png",
+        "img/allwork/11 Restaurant Website/5.png",
+      ]
+    }, {
+    title: "Plant's Website Design",
+description: "A fresh and responsive plant website design featuring vibrant visuals, product showcases, smooth navigation, interactive elements, and an engaging user experience.",
+
+      mainImg: "img/allwork/10plants/1.jpg",
+       link: "https://www.youtube.com/watch?v=WGe6wb9EORg&t=43s",
+       buy: "https://buymeacoffee.com/dm007/e/199650",
+      
+      sale: "Sale: 33",
+      thumbs: [
+        "img/allwork/10plants/2.png",
+        "img/allwork/10plants/3.png",
+        "img/allwork/10plants/4.png",
+        "img/allwork/10plants/1.jpg",
+      ]
+    },
+   {
+      title: "Educational Website Design",
+description: "A modern and responsive educational website design featuring interactive learning modules, smooth navigation, engaging visuals, resource showcases, and a seamless user experience.",
+
+      mainImg: "img/allwork/9edu/1.jpg",
+       link: "https://www.youtube.com/watch?v=vQsTVwdYxY4&t=98s",
+       buy: "https://buymeacoffee.com/dm007/e/186238",
+      
+      sale: "Sale: 27",
+      thumbs: [
+        "img/allwork/9edu/1.jpg",
+        "img/allwork/9edu/1.jpg",
+        "img/allwork/9edu/1.jpg",
+        "img/allwork/9edu/1.jpg",
+      ]
+    },{
+    title: "GYM/Fitness Website Design",
+description: "A dynamic and responsive gym/fitness website design featuring workout program showcases, smooth navigation, interactive visuals, engaging layouts, and a seamless user experience.",
+
+      mainImg: "img/allwork/8gym/1.jpg",
+       link: "https://www.youtube.com/watch?v=u71vrV0mfNM&t=67s",
+       buy: "https://buymeacoffee.com/dm007/e/176396",
+      
+      sale: "Sale: 29",
+      thumbs: [
+        "img/allwork/8gym/1.jpg",
+        "img/allwork/8gym/1.jpg",
+        "img/allwork/8gym/1.jpg",
+        "img/allwork/8gym/1.jpg",
+      ]
+    },{
+    title: "Coffee Shop Website Design",
+description: "A cozy and modern coffee shop website design featuring responsive layouts, digital menus, online ordering, rich visuals, engaging design, and a smooth user experience.",
+
+      mainImg: "img/allwork/7 Coffee/1.jpg",
+       link: "https://www.youtube.com/watch?v=mvIAqK_lloA&t=2s",
+       buy: "https://buymeacoffee.com/dm007/e/213412",
+      
+      sale: "Sale: 27",
+      thumbs: [
+        "img/allwork/7 Coffee/1.jpg",
+        "img/allwork/7 Coffee/1.jpg",
+        "img/allwork/7 Coffee/1.jpg",
+        "img/allwork/7 Coffee/1.jpg",
+      ]
+    },{
+    title: "Ice-Cream Website Design",
+description: "A fun and responsive ice-cream website design featuring colorful visuals, product showcases, smooth navigation, interactive elements, and an engaging user experience.",
+
+      mainImg: "img/allwork/6 Icecream/1.png",
+       link: "https://www.youtube.com/watch?v=CrWIRRtF9kM&t=927s",
+       buy: "https://buymeacoffee.com/dm007/e/173829",
+      
+      sale: "Sale: 51",
+      thumbs: [
+        "img/allwork/6 Icecream/1.png",
+        "img/allwork/6 Icecream/1.png",
+        "img/allwork/6 Icecream/1.png",
+        "img/allwork/6 Icecream/1.png",
+      ]
+    },{
+    title: "Kindergarten School Website Design",
+description: "A bright and responsive kindergarten school website design featuring playful visuals, smooth navigation, interactive learning features, engaging layouts, and a seamless user experience.",
+
+      mainImg: "img/allwork/5.5kintergargen/1.png",
+       link: "https://www.youtube.com/watch?v=G5RUtyV3SSY",
+       buy: "https://buymeacoffee.com/dm007/e/315958",
+      
+      sale: "Sale: 33",
+      thumbs: [
+        "img/allwork/5.5kintergargen/2.png",
+        "img/allwork/5.5kintergargen/3.png",
+        "img/allwork/5.5kintergargen/4.png",
+        "img/allwork/5.5kintergargen/1.png",
+      ]
+    },{
+     title: "Hotel Booking Website Design",
+description: "A modern and responsive hotel booking website design featuring room listings, smooth navigation, online booking functionality, interactive visuals, and a seamless user experience.",
+
+      mainImg: "img/allwork/5 Hotel Booking/1.png",
+       link: "https://www.youtube.com/watch?v=3g56yObs7FY&t=19s",
+       buy: "https://buymeacoffee.com/dm007/e/185883",
+      
+      sale: "Sale: 26",
+      thumbs: [
+        "img/allwork/5 Hotel Booking/2.png",
+        "img/allwork/5 Hotel Booking/3.png",
+        "img/allwork/5 Hotel Booking/4.png",
+        "img/allwork/5 Hotel Booking/1.png",
+      ]
+    },{
+    title: "Simple Ecommerce Website Design",
+description: "A clean and responsive eCommerce website design featuring product listings, smooth navigation, secure checkout, interactive visuals, and an engaging shopping experience.",
+
+      mainImg: "img/allwork/4 Ecommerce/1.png",
+       link: "https://www.youtube.com/watch?v=tkl7xLc4-QU",
+       buy: "https://buymeacoffee.com/dm007/e/171523",
+      
+      sale: "Sale: 6",
+      thumbs: [
+        "img/allwork/4 Ecommerce/1.png",
+        "img/allwork/4 Ecommerce/1.png",
+        "img/allwork/4 Ecommerce/1.png",
+        "img/allwork/4 Ecommerce/1.png",
+      ]
+    },{
+     title: "Ecommerce Website Design",
+description: "A modern and responsive eCommerce website design featuring product galleries, smooth navigation, secure checkout, interactive visuals, and an engaging shopping experience.",
+
+      mainImg: "img/allwork/3 Ecommerce/1.jpg",
+       link: "https://www.youtube.com/watch?v=B09IV4HN9qE&t=6s",
+       buy: "https://buymeacoffee.com/dm007/e/176655",
+      
+      sale: "Sale: 11",
+      thumbs: [
+        "img/allwork/3 Ecommerce/1.jpg",
+        "img/allwork/3 Ecommerce/2.jpg",
+        "img/allwork/3 Ecommerce/3.jpg",
+        "img/allwork/3 Ecommerce/4.jpg",
+      ]
+    },{
+   title: "Grocery Website Design",
+description: "A modern and responsive grocery website design featuring product showcases, smooth navigation, online ordering, interactive visuals, and a seamless user experience.",
+
+      mainImg: "img/allwork/2 Grocery Website/1.jpg",
+       link: "https://www.youtube.com/watch?v=GNMqn28qHdQ&t=71s",
+       buy: "https://buymeacoffee.com/dm007/e/171113",
+      
+      sale: "Sale: 18",
+      thumbs: [
+        "img/allwork/2 Grocery Website/2.png",
+        "img/allwork/2 Grocery Website/3.png",
+        "img/allwork/2 Grocery Website/4.png",
+        "img/allwork/2 Grocery Website/1.jpg",
+      ]
+    },{
+    title: "Ice-Cream Website Design",
+description: "A fun and colorful ice-cream website design featuring responsive layouts, product showcases, interactive visuals, engaging design, and a smooth user experience.",
+
+      mainImg: "img/allwork/1 Ice Cream/1.png",
+       link: "https://www.youtube.com/watch?v=td56by3APac&t=876s",
+       buy: "https://buymeacoffee.com/dm007/e/171134",
+      
+      sale: "Sale: 17",
+      thumbs: [
+        "img/allwork/1 Ice Cream/2.png",
+        "img/allwork/1 Ice Cream/3.png",
+        "img/allwork/1 Ice Cream/4.png",
+        "img/allwork/1 Ice Cream/1.png",
+      ]
+    },
+   
+  ];
+
+  const container = document.getElementById("projectContainer");
+
+  // Change main image when thumbnail clicked
+  function changeImage(imgElement) {
+    const card = imgElement.closest('.card');
+    const mainImg = card.querySelector('.product-img');
+    mainImg.src = imgElement.src;
+  }
+
+  function createProjectCard(project) {
+    const thumbsHTML = project.thumbs.map(src => 
+      `<img src="${src}" alt="Thumbnail" onclick="changeImage(this)" />`
+    ).join('');
+
+    return `
+      <div class="col-12">
+        <div class="card p-3 shadow-sm">
+          <div class="d-flex align-items-center flex-wrap flex-md-nowrap justify-content-between">
+            <div class="image-thumbs-wrapper">
+              <img src="${project.mainImg}" alt="${project.title}" class="product-img rounded mb-2" />
+              <div class="thumbs-vertical">
+                ${thumbsHTML}
+              </div>
+            </div>
+             <div class="d-none d-md-block vertical-line"></div>
+            <div class="flex-grow-1 text-center px-3 mb-3 mb-md-0">
+              <h3 class="h5 mb-2">${project.title}</h3>
+              <p class="mb-2 project-des">${project.description}</p>
+              
+              <a href="${project.link}" class="btn btn-sm youtube-btn" target="_blank">
+  See Tutorial <i class="fab fa-youtube ms-1"></i>
+</a>
+<a href="${project.buy}" class="btn btn-sm">Source Code</a>
+
+              
+            </div>
+            <div class="d-none d-md-block vertical-line"></div>
+            <div class="text-center ms-md-4 right-side">
+              
+<h4 class="mb-1 text-success">${project.sale}</h4>
+               <i class="fa fa-star text-warning"></i>
+    <i class="fa fa-star text-warning"></i>
+    <i class="fa fa-star text-warning"></i>
+    <i class="fa fa-star text-warning"></i>
+    <i class="fa fa-star-half-alt text-warning"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+              // <h4 class="mb-1 text-success">${project.price}</h4>
+              // <p class="text-danger mb-2">${project.sale}</p>
+  // Insert project cards on load
+  projectData.forEach(project => {
+    container.insertAdjacentHTML("beforeend", createProjectCard(project));
+  });
+
+  // See More button functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('#projectContainer .col-12');
+    const btn = document.getElementById('seeMoreBtn');
+    let visibleCount = 4;
+
+    cards.forEach((card, idx) => {
+      if (idx >= visibleCount) card.style.display = 'none';
+    });
+
+    btn.addEventListener('click', () => {
+      let shown = 0;
+      for (let i = visibleCount; i < cards.length && shown < 4; i++) {
+        cards[i].style.display = 'block';
+        shown++;
+      }
+      visibleCount += shown;
+      if (visibleCount >= cards.length) btn.style.display = 'none';
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
