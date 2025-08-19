@@ -229,12 +229,33 @@ body.dark-mode .dark-mode{
 /* fedback */
 body.dark-mode .feedback-card{
   background-color: #292929;
+
+}
+body.red-mode .feedback-card{
+  background-color: #4c0e0e;
 }
 body.dark-mode .feedback-card p{
   color:#d4d4d4 !important;
 }
+body.red-mode .feedback-card p{
+  color:#d4d4d4 !important;
+}
 body.dark-mode .section-talk{
   background-color: #000;
+}
+body.red-mode .section-talk{
+  background-color: #4c0e0e ;
+  color: #fff;
+}
+body.red-mode .dark-mode{
+  background-color: #4c0e0e !important;
+  color:#fff !important;
+}
+body.red-mode .dark-mode {
+  color:#fff !important;
+}
+body.red-mode .nav-links li a.active {
+  border-bottom: 2px solid #4c0e0e;
 }
 
 /* about */
@@ -316,7 +337,12 @@ body.red-mode .badge {
   color:#000000;
 }
 body.red-mode .carousel-container{
-  background-color: #790505 !important;
+  background-color: #2c0101 !important;
+
+}
+body.red-mode .team-section{
+  background-color: #180000 !important;
+  color: #fff;
 
 }
 body.red-mode .tech-icon span{
@@ -1523,6 +1549,7 @@ body.dark-mode .tech-icon span {
   .team-section .container-control {
     width: 300px;
     height: 300px;
+    order:1;
   }
 
   .team-section .container-control .icon .imgbx {
@@ -1568,6 +1595,16 @@ body.dark-mode .tech-icon span {
     font-size: 0.8rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 /* recent Project */
